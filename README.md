@@ -92,9 +92,9 @@ import { SolidTabBar } from "react-native-tab-bars";
 - [x] ~~LICENSE~~
 - [ ] Write an article about the lib on Medium
 
-# Change Log
+# Credits
 
-Change log will be here !
+Design inspired by [Sina Amiriyam](https://www.instagram.com/p/B4sJzZBAfGr/)
 
 ## Author
 
