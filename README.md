@@ -90,6 +90,8 @@ import { SolidTabBar } from "react-native-tab-bars";
 ## Future Plans
 
 - [x] ~~LICENSE~~
+- [ ] Dotted Tab Bar Component Option
+- [ ] Animation
 - [ ] Write an article about the lib on Medium
 
 # Credits
