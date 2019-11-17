@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, View, Text, StatusBar } from "react-native";
-import SolidTabBar from "./lib/src/SolidTabBar/SolidTabBar";
+import { SolidTabBar } from "react-native-tab-bars";
 
 const dummyData = [
   { id: 0, text: "All" },

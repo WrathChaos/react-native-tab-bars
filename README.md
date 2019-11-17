@@ -1,11 +1,8 @@
 <img alt="React Native Library Boilerplate" src="assets/logo.png" width="1050"/>
 
-
 [![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/WrathChaos/react-native-library-boilerplate)
 
-
 [![React Native Library Boiler Plate](https://img.shields.io/badge/-React%20Native%20Library%20Boilerplate-lightgrey?style=for-the-badge)](https://github.com/WrathChaos/react-native-library-boilerplate)
-
 
 [![npm version](https://img.shields.io/npm/v/react-native-library-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-library-boilerplate)
 [![npm](https://img.shields.io/npm/dt/react-native-library-boilerplate.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-library-boilerplate)
@@ -33,6 +30,7 @@ npm i react-native-library-boilerplate
 ```js
 "react": ">= 16.x.x",
 "react-native": ">= 0.55.x",
+"react-native-androw": ">= 0.0.34"
 ```
 
 # Usage
@@ -40,23 +38,52 @@ npm i react-native-library-boilerplate
 ## Import
 
 ```js
-import { Component1, Component2 } from "react-native-library-boilerplate";
+import { SolidTabBar } from "react-native-tab-bars";
 ```
 
 ## Component1 Usage
 
+```jsx
+<SolidTabBar
+  initial={0}
+  onPress={data => console.log(data)}
+  onChange={data => console.log(data)}
+  tabs={[
+    { id: 0, text: "All" },
+    { id: 1, text: "Birds" },
+    { id: 2, text: "Fishes" },
+    { id: 3, text: "Tigers" }
+  ]}
+/>
+```
+
+## Tabs Object Array Format
+
 ```js
-<Component1 />
+[
+  { id: 0, text: "All" },
+  { id: 1, text: "Birds" },
+  { id: 2, text: "Fishes" },
+  { id: 3, text: "Tigers" }
+];
 ```
 
 # Configuration - Props
 
-| Property |  Type   | Default | Description                                             |
-| -------- | :-----: | :-----: | ------------------------------------------------------- |
-| outline  | boolean |  true   | make the button outline                                 |
-| solid    | boolean |  false  | make the button with a solid background and a shadow    |
-| gradient | boolean |  false  | make the button with a gradient background and a shadow |
-| width    | number  |   150   | change the button's width                               |
+| Property          |   Type   |   Default    | Description                                                       |
+| ----------------- | :------: | :----------: | ----------------------------------------------------------------- |
+| tabs              |  array   | object array | you have to set your object array with formatted example as above |
+| initial           |  number  |     null     | default selected tab                                              |
+| onPress           | function |   default    | set your own logic when a tab is pressed                          |
+| onChange          | function |   default    | set your own logic when selected tab is changed                   |
+| tabWith           |  number  |      60      | change the each tab's width value                                 |
+| tabPadding        |  number  |      5       | change the each tab's padding value                               |
+| shadowStyle       |  style   |    shadow    | set your own shadow style for selected tab                        |
+| shadowColor       |  color   |   #757575    | change the current shadow color                                   |
+| activeColor       |  color   |   #fbd000    | change the selected tab's color                                   |
+| inActiveColor     |  color   | transparent  | change the unselected tabs' color                                 |
+| activeTextColor   |  color   |     #fff     | change the selected tab's text color                              |
+| inactiveTextColor |  color   |     #000     | change the unselected tabs' text color                            |
 
 ## Future Plans
 
