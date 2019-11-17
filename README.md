@@ -43,7 +43,7 @@ npm i react-native-tab-bars
 import { SolidTabBar } from "react-native-tab-bars";
 ```
 
-## Component1 Usage
+## Usage
 
 ```jsx
 <SolidTabBar
