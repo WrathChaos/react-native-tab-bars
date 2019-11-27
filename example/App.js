@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, View, Text, StatusBar } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 import { SolidTabBar } from "react-native-tab-bars";
 import LinearGradient from "react-native-linear-gradient";
 import TitledHeader from "./src/components/TitledHeader/TitledHeader";
@@ -18,10 +18,10 @@ const App = () => {
       <SafeAreaView>
         <TitledHeader />
         <SolidTabBar
-          tabs={dummyData}
           initial={0}
-          activeColor="#f0c614"
+          tabs={dummyData}
           shadowColor="#000"
+          activeColor="#f0c614"
           inactiveTextColor="#fff"
           onChange={data => console.log(data)}
         />
