@@ -48,7 +48,6 @@ import { SolidTabBar } from "react-native-tab-bars";
 ```jsx
 <SolidTabBar
   initial={0}
-  onPress={data => console.log(data)}
   onChange={data => console.log(data)}
   tabs={[
     { id: 0, text: "All" },
