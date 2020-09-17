@@ -48,12 +48,12 @@ import { SolidTabBar } from "react-native-tab-bars";
 ```jsx
 <SolidTabBar
   initial={0}
-  onChange={data => console.log(data)}
+  onChange={(data) => console.log(data)}
   tabs={[
     { id: 0, text: "All" },
     { id: 1, text: "Birds" },
     { id: 2, text: "Fishes" },
-    { id: 3, text: "Tigers" }
+    { id: 3, text: "Tigers" },
   ]}
 />
 ```
@@ -65,7 +65,7 @@ import { SolidTabBar } from "react-native-tab-bars";
   { id: 0, text: "All" },
   { id: 1, text: "Birds" },
   { id: 2, text: "Fishes" },
-  { id: 3, text: "Tigers" }
+  { id: 3, text: "Tigers" },
 ];
 ```
 
@@ -91,6 +91,7 @@ import { SolidTabBar } from "react-native-tab-bars";
 - [x] ~~LICENSE~~
 - [ ] Dotted Tab Bar Component Option
 - [ ] Animation
+- [x] ~~Typescript Challenge!~~
 - [ ] Write an article about the lib on Medium
 
 # Credits
