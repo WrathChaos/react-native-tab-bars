@@ -7,7 +7,7 @@
     "jsx": "react-native",
     "noImplicitAny": false,
     "incremental": true /* Enable incremental compilation */,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "strict": true,
     "moduleResolution": "node",
     "skipLibCheck": true,

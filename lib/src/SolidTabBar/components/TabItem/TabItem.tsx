@@ -1,10 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
+import * as React from "react";
 import { Text, View } from "react-native";
 import Androw from "react-native-androw";
 import styles, { _shadowStyle, _container, _textStyle } from "./TabItem.style";
 
-const TabItem = props => {
+export interface ITabItemProps {
+  text: string;
+  isActive: boolean;
+  tabWidth?: number;
+  textStyle?: any;
+  tabPadding?: number;
+  shadowStyle?: any;
+  shadowColor?: string;
+  activeColor?: string;
+  inActiveColor?: string;
+  activeTextColor?: string;
+  inactiveTextColor?: string;
+}
+
+const TabItem = (props: ITabItemProps) => {
   const {
     text,
     isActive,
@@ -16,23 +29,31 @@ const TabItem = props => {
     activeColor,
     inActiveColor,
     activeTextColor,
-    inactiveTextColor
+    inactiveTextColor,
   } = props;
   return (
-    <Androw style={isActive && (shadowStyle || _shadowStyle(shadowColor))}>
+    <Androw
+      style={
+        isActive && (shadowStyle || _shadowStyle(shadowColor || "#757575"))
+      }
+    >
       <View
         style={_container(
           isActive,
-          activeColor,
-          inActiveColor,
-          tabWidth,
-          tabPadding
+          activeColor || "#fbd000",
+          inActiveColor || "transparent",
+          tabWidth || 60,
+          tabPadding || 5,
         )}
       >
         <Text
           style={[
             textStyle || styles.textStyle,
-            _textStyle(isActive, activeTextColor, inactiveTextColor)
+            _textStyle(
+              isActive,
+              activeTextColor || "#fff",
+              inactiveTextColor || "#757575",
+            ),
           ]}
         >
           {text}
@@ -40,17 +61,6 @@ const TabItem = props => {
       </View>
     </Androw>
   );
-};
-
-TabItem.propTypes = {
-  text: PropTypes.string,
-  tabPadding: PropTypes.number,
-  shadowColor: PropTypes.string,
-  activeColor: PropTypes.string,
-  inactiveColor: PropTypes.string,
-  activeTextColor: PropTypes.string,
-  inactiveTextColor: PropTypes.string,
-  tabWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 TabItem.defaultProps = {
@@ -61,7 +71,7 @@ TabItem.defaultProps = {
   activeColor: "#fbd000",
   activeTextColor: "#fff",
   inactiveTextColor: "#757575",
-  inactiveColor: "transparent"
+  inactiveColor: "transparent",
 };
 
 export default TabItem;

@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import * as React from "react";
 import { View, TouchableOpacity } from "react-native";
 import TabItem from "./components/TabItem/TabItem";
 import styles from "./SolidTabBar.style";
@@ -19,7 +19,7 @@ interface IState {
   selectedOne: number;
 }
 
-export default class SolidTabBar extends PureComponent<IProps, IState> {
+export default class SolidTabBar extends React.PureComponent<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
