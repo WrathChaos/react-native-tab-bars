@@ -71,20 +71,22 @@ import { SolidTabBar } from "react-native-tab-bars";
 
 # Configuration - Props
 
-| Property          |   Type   |   Default    | Description                                                       |
-| ----------------- | :------: | :----------: | ----------------------------------------------------------------- |
-| tabs              |  array   | object array | you have to set your object array with formatted example as above |
-| initial           |  number  |     null     | default selected tab                                              |
-| onPress           | function |   default    | set your own logic when a tab is pressed                          |
-| onChange          | function |   default    | set your own logic when selected tab is changed                   |
-| tabWith           |  number  |      60      | change the each tab's width value                                 |
-| tabPadding        |  number  |      5       | change the each tab's padding value                               |
-| shadowStyle       |  style   |    shadow    | set your own shadow style for selected tab                        |
-| shadowColor       |  color   |   #757575    | change the current shadow color                                   |
-| activeColor       |  color   |   #fbd000    | change the selected tab's color                                   |
-| inActiveColor     |  color   | transparent  | change the unselected tabs' color                                 |
-| activeTextColor   |  color   |     #fff     | change the selected tab's text color                              |
-| inactiveTextColor |  color   |     #000     | change the unselected tabs' text color                            |
+| Property          |   Type    |   Default    | Description                                                       |
+| ----------------- | :-------: | :----------: | ----------------------------------------------------------------- |
+| tabs              |   array   | object array | you have to set your object array with formatted example as above |
+| initial           |  number   |     null     | default selected tab                                              |
+| onPress           | function  |   default    | set your own logic when a tab is pressed                          |
+| onChange          | function  |   default    | set your own logic when selected tab is changed                   |
+| tabWith           |  number   |      60      | change the each tab's width value                                 |
+| tabPadding        |  number   |      5       | change the each tab's padding value                               |
+| shadowStyle       |   style   |    shadow    | set your own shadow style for selected tab                        |
+| shadowColor       |   color   |   #757575    | change the current shadow color                                   |
+| activeColor       |   color   |   #fbd000    | change the selected tab's color                                   |
+| inActiveColor     |   color   | transparent  | change the unselected tabs' color                                 |
+| activeTextColor   |   color   |     #fff     | change the selected tab's text color                              |
+| inactiveTextColor |   color   |     #000     | change the unselected tabs' text color                            |
+| Container         | component |     View     | change the main container's component type                        |
+| style             |   style   |   default    | change or override the main container's style object              |
 
 ## Future Plans
 

@@ -1,15 +1,24 @@
 import * as React from "react";
-import { View, TouchableOpacity } from "react-native";
-import TabItem from "./components/TabItem/TabItem";
+import { View, TouchableOpacity, StyleProp, ViewStyle } from "react-native";
+/**
+ * ? Local Imports
+ */
 import styles from "./SolidTabBar.style";
+import TabItem from "./components/TabItem/TabItem";
+
+export type CustomStyleProp =
+  | StyleProp<ViewStyle>
+  | Array<StyleProp<ViewStyle>>;
 
 export interface ISolidTabBarTypes {
   id: number;
   text: string;
 }
 
-interface IProps {
+interface ISolidTabBarProps {
+  Container?: any;
   initial?: number;
+  style?: CustomStyleProp;
   tabs: Array<ISolidTabBarTypes>;
   onPress?: (item: ISolidTabBarTypes) => void;
   onChange?: (item: ISolidTabBarTypes) => void;
@@ -19,8 +28,11 @@ interface IState {
   selectedOne: number;
 }
 
-export default class SolidTabBar extends React.PureComponent<IProps, IState> {
-  constructor(props: IProps) {
+export default class SolidTabBar extends React.PureComponent<
+  ISolidTabBarProps,
+  IState
+> {
+  constructor(props: ISolidTabBarProps) {
     super(props);
     this.state = {
       selectedOne: props.initial || 0,
@@ -54,6 +66,11 @@ export default class SolidTabBar extends React.PureComponent<IProps, IState> {
   };
 
   render() {
-    return <View style={styles.container}>{this.renderTabs()}</View>;
+    const { Container = View, style } = this.props;
+    return (
+      <Container {...this.props} style={[styles.container, style]}>
+        {this.renderTabs()}
+      </Container>
+    );
   }
 }
