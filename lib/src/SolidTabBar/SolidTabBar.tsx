@@ -68,8 +68,8 @@ export default class SolidTabBar extends React.PureComponent<
   render() {
     const { Container = View, style } = this.props;
     return (
-      <Container {...this.props} style={[styles.container, style]}>
-        {this.renderTabs()}
+      <Container {...this.props}>
+        <View style={[styles.container, style]}>{this.renderTabs()}</View>
       </Container>
     );
   }
